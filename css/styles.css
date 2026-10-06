@@ -35,3 +35,7 @@ body {
     border-right: 1px solid black;
     flex-grow: 1;
 }
+
+.black {
+    background-color: black;
+}
