@@ -1,8 +1,11 @@
 let container = document.createElement("div");
 container.classList.add("container");
 
-function hoverOnSquare (e) {
-    e.target.classList.add("black");
+function hoverEffect(e) {
+    let div = e.target;
+    if (div.classList[0] == "square") {
+        div.classList.add("black");
+    }
 }
 
 for(let i = 0; i < 4; i++){
@@ -12,10 +15,12 @@ for(let i = 0; i < 4; i++){
         let square = document.createElement("div");
         square.classList.add("square");
 
-        square.addEventListener("mouseenter", hoverOnSquare);
         row.appendChild(square);
     }
     container.appendChild(row);
 }
+
+container.addEventListener("mouseover", hoverEffect);
+
 
 document.body.appendChild(container);
