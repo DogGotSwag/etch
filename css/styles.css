@@ -5,12 +5,23 @@ html, body {
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 body {
     display: flex;
+    flex-direction: column;
+}
+
+header {
+    height: 40px;
+    background-color: black;
+}
+.main {
+    display: flex;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 .container{
