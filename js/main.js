@@ -25,8 +25,12 @@ function makeGrid(numberPerSide = 4) {
 let button = document.createElement("button");
 button.textContent = "Size";
 button.addEventListener("click", () => {
-    let number = +prompt("number of squares per side");
-    makeGrid(number);
+    let num = 0;
+    do{
+        num = +prompt("number of squares per side (0-100 plz)");    
+    }
+    while(num < 0 || num > 100);
+    makeGrid(num);
 });
 
 
