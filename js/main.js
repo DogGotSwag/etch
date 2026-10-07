@@ -26,6 +26,7 @@ let button = document.createElement("button");
 button.textContent = "Size";
 button.addEventListener("click", () => {
     let number = +prompt("number of squares per side");
+    makeGrid(number);
 });
 
 
