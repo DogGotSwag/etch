@@ -1,6 +1,10 @@
 let container = document.createElement("div");
 container.classList.add("container");
 
+let button = document.createElement("button");
+button.textContent = "Size";
+
+
 function hoverEffect(e) {
     let div = e.target;
     if (div.classList[0] == "square") {
@@ -22,5 +26,8 @@ for(let i = 0; i < 4; i++){
 
 container.addEventListener("mouseover", hoverEffect);
 
+let header = document.querySelector("header");
+header.appendChild(button);
 
-document.body.appendChild(container);
+let main = document.querySelector(".main");
+main.appendChild(container);
